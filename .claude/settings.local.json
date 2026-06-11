@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '/<script>/{f=1;next} /<\\\\/script>/{f=0} f' index.html)",
+      "Bash(node --check /tmp/site.js)",
+      "Read(//tmp/**)",
+      "Bash(node -e \"console.log\\(require\\('puppeteer'\\)?'puppeteer':''\\)\")",
+      "Bash(node -e \"console.log\\(require\\('playwright'\\)?'playwright':''\\)\")",
+      "Read(//Applications/**)",
+      "Bash(node -e \"require\\('jsdom'\\);console.log\\('jsdom-ok'\\)\")",
+      "Bash(node -e \"require\\('chrome-remote-interface'\\);console.log\\('cri-ok'\\)\")",
+      "Bash(npm ls *)",
+      "Bash(node -e \"console.log\\('WS:', typeof WebSocket\\)\")",
+      "Bash(curl *)"
+    ]
+  }
+}
