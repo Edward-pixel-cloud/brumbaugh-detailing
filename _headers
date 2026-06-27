@@ -1,0 +1,14 @@
+# Netlify response headers — https://docs.netlify.com/routing/headers/
+
+# Cache images in the browser so repeat visits are instant.
+# 7 days, then serve stale while revalidating in the background.
+# Note: if you replace a photo, keep a NEW filename (or it may take up to
+# a week for returning visitors to see the change).
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Sensible security defaults for every page.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin

@@ -8,19 +8,21 @@
 <meta name="keywords" content="auto detailing Darke County, mobile detailing Arcanum Ohio, car detailing Greenville OH, interior detail, exterior detail, ceramic, Brumbaugh Detailing">
 <meta name="author" content="Brumbaugh Detailing">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://brumbaughdetailing.com/">
 
 <!-- Open Graph (Facebook / Instagram / iMessage previews) -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://brumbaughdetailing.com/">
 <meta property="og:title" content="Brumbaugh Detailing — Premium Mobile Auto Care">
 <meta property="og:description" content="We bring your car back to life. Mobile detailing serving Darke County, OH. Call (937) 670-2536 to book.">
-<meta property="og:image" content="images/logo.jpeg">
+<meta property="og:image" content="https://brumbaughdetailing.com/images/logo.jpeg">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter / X cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Brumbaugh Detailing — Premium Mobile Auto Care">
 <meta name="twitter:description" content="We bring your car back to life. Mobile detailing in Darke County, OH.">
-<meta name="twitter:image" content="images/logo.jpeg">
+<meta name="twitter:image" content="https://brumbaughdetailing.com/images/logo.jpeg">
 
 <!-- Local Business structured data (helps Google show in maps & local results) -->
 <script type="application/ld+json">
@@ -28,7 +30,7 @@
   "@context": "https://schema.org",
   "@type": "AutoDetailing",
   "name": "Brumbaugh Detailing",
-  "image": "images/logo.jpeg",
+  "image": "https://brumbaughdetailing.com/images/logo.jpeg",
   "telephone": "+19376702536",
   "priceRange": "$$",
   "address": {
@@ -39,7 +41,7 @@
   },
   "areaServed": "Darke County, Ohio",
   "openingHours": "Mo-Su 06:00-18:00",
-  "url": "",
+  "url": "https://brumbaughdetailing.com/",
   "sameAs": [
     "https://instagram.com/brumbaugh.detailing"
   ]
@@ -50,7 +52,9 @@
 <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
 <link rel="apple-touch-icon" href="images/logo.jpeg">
 
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 <style>
   :root {
     --blue: #2174e0;
@@ -216,7 +220,7 @@
   }
   .nav-cta:hover { background: var(--blue-light); box-shadow: 0 0 24px 0 rgba(33,116,224,0.5); transform: translateY(-1px); }
 
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
   .hamburger span { width: 26px; height: 2px; background: var(--white); transition: 0.3s; }
 
   /* Mobile menu - hidden by default on all screens, only shown when opened on mobile */
@@ -930,6 +934,7 @@
     padding: 3rem;
     position: relative; overflow: hidden;
     box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    scroll-margin-top: 88px;
   }
   .booking-form-wrap::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -1281,7 +1286,7 @@
 
 <!-- PAGE LOADER -->
 <div class="page-loader" id="pageLoader">
-  <img src="images/logo.jpeg" alt="" class="loader-logo">
+  <img width="400" height="400" src="images/logo.jpeg" alt="" class="loader-logo">
   <div class="loader-text">Brumbaugh Detailing</div>
 </div>
 
@@ -1293,13 +1298,13 @@
   <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
   </button>
-  <img id="lightboxImg" src="" alt="">
+  <img id="lightboxImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Detailing work, enlarged">
 </div>
 
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-logo">
-    <img src="images/logo.jpeg" alt="Logo">
+    <img src="images/logo.jpeg" alt="Brumbaugh Detailing logo" width="44" height="44">
     <div class="nav-brand">
       <span class="nav-brand-top">BRUMBAUGH</span>
       <span class="nav-brand-bottom">Detailing</span>
@@ -1312,12 +1317,12 @@
     <li><a href="#merch">Merch</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#booking">Book</a></li>
+    <li><a href="#bookingFormContainer">Book</a></li>
   </ul>
-  <a href="#booking" class="nav-cta">Book Now →</a>
-  <div class="hamburger" onclick="toggleMenu()">
+  <a href="#bookingFormContainer" class="nav-cta">Book Now →</a>
+  <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
@@ -1328,9 +1333,9 @@
     <li><a href="#merch" onclick="toggleMenu()">Merch</a></li>
     <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
     <li><a href="#faq" onclick="toggleMenu()">FAQ</a></li>
-    <li><a href="#booking" onclick="toggleMenu()">Book</a></li>
+    <li><a href="#bookingFormContainer" onclick="toggleMenu()">Book</a></li>
   </ul>
-  <a href="#booking" class="mobile-menu-cta" onclick="toggleMenu()">Book Now →</a>
+  <a href="#bookingFormContainer" class="mobile-menu-cta" onclick="toggleMenu()">Book Now →</a>
 </div>
 
 <!-- HERO -->
@@ -1348,7 +1353,7 @@
       </h1>
       <p class="hero-sub">Premium mobile auto detailing across Arcanum and Darke County. Interior, exterior, and full-package services — done right at your driveway.</p>
       <div class="hero-btns">
-        <a href="#booking" class="btn-primary"><span>Book Your Detail →</span></a>
+        <a href="#bookingFormContainer" class="btn-primary"><span>Book Your Detail →</span></a>
         <a href="tel:9376702536" class="btn-secondary">(937) 670-2536</a>
       </div>
       <div class="hero-tagline">
@@ -1361,10 +1366,10 @@
     </div>
     <div class="hero-visual reveal">
       <div class="hero-img-stack">
-        <img src="images/IMG_2855.jpeg" alt="Tesla being detailed" class="hero-img-main hero-rotate active" data-rotate="0">
-        <img loading="lazy" src="images/IMG_2872.jpeg" alt="Interior after detail" class="hero-img-main hero-rotate" data-rotate="1">
-        <img loading="lazy" src="images/IMG_2880.jpeg" alt="Luxury interior" class="hero-img-main hero-rotate" data-rotate="2">
-        <img src="images/IMG_2869.jpeg" alt="Interior detail" class="hero-img-accent">
+        <img width="1170" height="1560" src="images/IMG_2855.jpeg" alt="Tesla being detailed" class="hero-img-main hero-rotate active" data-rotate="0">
+        <img width="1170" height="1560" loading="lazy" src="images/IMG_2872.jpeg" alt="Interior after detail" class="hero-img-main hero-rotate" data-rotate="1">
+        <img width="1170" height="1560" loading="lazy" src="images/IMG_2880.jpeg" alt="Luxury interior" class="hero-img-main hero-rotate" data-rotate="2">
+        <img width="1170" height="1560" src="images/IMG_2869.jpeg" alt="Interior detail" class="hero-img-accent">
         <div class="hero-img-tag">EST. 2026</div>
         <div class="hero-img-dots">
           <span class="hero-dot active" data-dot="0"></span>
@@ -1415,7 +1420,7 @@
           <li>Windows & Mirrors Cleaned</li>
           <li>Detailing of All Surfaces</li>
         </ul>
-        <a href="#booking" class="service-book-btn" onclick="preselectService('interior')">Book Interior</a>
+        <a href="#bookingFormContainer" class="service-book-btn" onclick="preselectService('interior')">Book Interior</a>
       </div>
 
       <div class="service-card featured">
@@ -1440,7 +1445,7 @@
           <li>Quality Products</li>
           <li>Satisfaction Guaranteed</li>
         </ul>
-        <a href="#booking" class="service-book-btn" onclick="preselectService('full')">Book Full Package</a>
+        <a href="#bookingFormContainer" class="service-book-btn" onclick="preselectService('full')">Book Full Package</a>
       </div>
 
       <div class="service-card">
@@ -1467,7 +1472,7 @@
           <li>Exterior Spray Wax</li>
           <li>Door Jams Cleaned</li>
         </ul>
-        <a href="#booking" class="service-book-btn" onclick="preselectService('exterior')">Book Exterior</a>
+        <a href="#bookingFormContainer" class="service-book-btn" onclick="preselectService('exterior')">Book Exterior</a>
       </div>
 
     </div>
@@ -1486,9 +1491,9 @@
     <div class="ba-wrapper reveal">
       <div>
         <div class="ba-container" data-ba>
-          <img loading="lazy" src="images/IMG_2870.jpeg" alt="Before" class="ba-image ba-before">
+          <img width="1170" height="1560" loading="lazy" src="images/IMG_2870.jpeg" alt="Before" class="ba-image ba-before">
           <div class="ba-after-wrap">
-            <img loading="lazy" src="images/IMG_2872.jpeg" alt="After" class="ba-image">
+            <img width="1170" height="1560" loading="lazy" src="images/IMG_2872.jpeg" alt="After" class="ba-image">
           </div>
           <div class="ba-label before">Before</div>
           <div class="ba-label after">After</div>
@@ -1498,9 +1503,9 @@
       </div>
       <div>
         <div class="ba-container" data-ba>
-          <img loading="lazy" src="images/IMG_2871.jpeg" alt="Before" class="ba-image ba-before">
+          <img width="1170" height="1560" loading="lazy" src="images/IMG_2871.jpeg" alt="Before" class="ba-image ba-before">
           <div class="ba-after-wrap">
-            <img loading="lazy" src="images/IMG_2873.jpeg" alt="After" class="ba-image">
+            <img width="1170" height="1560" loading="lazy" src="images/IMG_2873.jpeg" alt="After" class="ba-image">
           </div>
           <div class="ba-label before">Before</div>
           <div class="ba-label after">After</div>
@@ -1659,7 +1664,7 @@
       </div>
 
       <div class="about-visual reveal">
-        <img loading="lazy" src="images/IMG_2868.jpeg" alt="Brumbaugh Detailing merchandise — black and white collections" class="about-photo">
+        <img width="1536" height="1024" loading="lazy" src="images/IMG_2868.jpeg" alt="Brumbaugh Detailing merchandise — black and white collections" class="about-photo">
       </div>
     </div>
   </div>
@@ -1678,7 +1683,7 @@
 
       <!-- Product image -->
       <div class="merch-img-wrap">
-        <img loading="lazy" src="images/IMG_2868.jpeg" alt="Brumbaugh Detailing shirts — black and white collections" class="merch-img">
+        <img width="1536" height="1024" loading="lazy" src="images/IMG_2868.jpeg" alt="Brumbaugh Detailing shirts — black and white collections" class="merch-img">
         <div class="merch-img-tag">All Sizes $30</div>
       </div>
 
@@ -1690,21 +1695,21 @@
         <form id="merchForm" onsubmit="submitMerch(event)">
           <div class="form-row">
             <div class="form-group">
-              <label>First Name</label>
+              <label for="m_first">First Name</label>
               <input type="text" id="m_first" placeholder="John" autocomplete="given-name" required>
             </div>
             <div class="form-group">
-              <label>Last Name</label>
+              <label for="m_last">Last Name</label>
               <input type="text" id="m_last" placeholder="Smith" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-group">
-            <label>Phone Number</label>
+            <label for="m_phone">Phone Number</label>
             <input type="tel" id="m_phone" placeholder="(937) 555-0000" autocomplete="tel" inputmode="tel" pattern="[\s\d\(\)\-\+\.]{7,}" title="Please enter a valid phone number" required>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>Style</label>
+              <label for="m_style">Style</label>
               <select id="m_style" required>
                 <option value="">Select style...</option>
                 <option value="Short Sleeve — Black">Short Sleeve — Black</option>
@@ -1714,7 +1719,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Size</label>
+              <label for="m_size">Size</label>
               <select id="m_size" required>
                 <option value="">Select size...</option>
                 <option value="Small">Small</option>
@@ -1725,7 +1730,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Quantity</label>
+            <label for="m_qty">Quantity</label>
             <select id="m_qty" required>
               <option value="1">1 shirt — $30</option>
               <option value="2">2 shirts — $60</option>
@@ -1734,7 +1739,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Notes (optional)</label>
+            <label for="m_notes">Notes (optional)</label>
             <textarea id="m_notes" placeholder="Multiple sizes? Different styles? Let us know..."></textarea>
           </div>
           <button type="submit" class="form-submit">Order Now — $30 Each →</button>
@@ -1797,15 +1802,18 @@
       <p class="section-sub">A look at the cars, trucks, and SUVs we've brought back to showroom condition across Darke County.</p>
     </div>
     <div class="gallery-grid reveal">
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2855.jpeg')"><img src="images/IMG_2855.jpeg" alt="Tesla exterior wash"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2874.jpeg')"><img loading="lazy" src="images/IMG_2874.jpeg" alt="Detail work"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2866.jpeg')"><img loading="lazy" src="images/IMG_2866.jpeg" alt="Detail work"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2869.jpeg')"><img src="images/IMG_2869.jpeg" alt="Chrysler interior clean"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2880.jpeg')"><img loading="lazy" src="images/IMG_2880.jpeg" alt="Luxury interior clean"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2881.jpeg')"><img loading="lazy" src="images/IMG_2881.jpeg" alt="Detail work"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2882.jpeg')"><img loading="lazy" src="images/IMG_2882.jpeg" alt="Detail work"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2883.jpeg')"><img loading="lazy" src="images/IMG_2883.jpeg" alt="Detail result"></div>
-      <div class="gallery-item" onclick="openLightbox('images/IMG_2884.jpeg')"><img loading="lazy" src="images/IMG_2884.jpeg" alt="Detail result"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2855.jpeg')"><img width="1170" height="1560" src="images/IMG_2855.jpeg" alt="Tesla exterior wash"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2874.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_2874.jpeg" alt="Detail work"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2866.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_2866.jpeg" alt="Detail work"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2869.jpeg')"><img width="1170" height="1560" src="images/IMG_2869.jpeg" alt="Chrysler interior clean"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2880.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_2880.jpeg" alt="Luxury interior clean"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2881.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_2881.jpeg" alt="Detail work"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2882.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_2882.jpeg" alt="Detail work"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2883.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_2883.jpeg" alt="Detail result"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_2884.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_2884.jpeg" alt="Detail result"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_3067.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_3067.jpeg" alt="Truck interior — detailed leather seats and floor mats"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_3068.jpeg')"><img width="1170" height="1560" loading="lazy" src="images/IMG_3068.jpeg" alt="SUV cargo area cleaned and vacuumed"></div>
+      <div class="gallery-item" onclick="openLightbox('images/IMG_3070.jpeg')"><img width="720" height="1560" loading="lazy" src="images/IMG_3070.jpeg" alt="Red Chevrolet Camaro exterior detail"></div>
     </div>
   </div>
 </section>
@@ -1913,26 +1921,20 @@
         <form id="bookingForm" onsubmit="submitForm(event)">
           <div class="form-row">
             <div class="form-group">
-              <label>First Name</label>
+              <label for="f_first">First Name</label>
               <input type="text" id="f_first" placeholder="John" autocomplete="given-name" required>
             </div>
             <div class="form-group">
-              <label>Last Name</label>
+              <label for="f_last">Last Name</label>
               <input type="text" id="f_last" placeholder="Smith" autocomplete="family-name" required>
             </div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Phone</label>
-              <input type="tel" id="f_phone" placeholder="(937) 555-0000" autocomplete="tel" inputmode="tel" pattern="[\s\d\(\)\-\+\.]{7,}" title="Please enter a valid phone number" required>
-            </div>
-            <div class="form-group">
-              <label>Email (optional)</label>
-              <input type="email" id="f_email" placeholder="you@email.com" autocomplete="email">
-            </div>
+          <div class="form-group">
+            <label for="f_phone">Phone</label>
+            <input type="tel" id="f_phone" placeholder="(937) 555-0000" autocomplete="tel" inputmode="tel" pattern="[\s\d\(\)\-\+\.]{7,}" title="Please enter a valid phone number" required>
           </div>
           <div class="form-group">
-            <label>Service</label>
+            <label for="serviceSelect">Service</label>
             <select id="serviceSelect" required>
               <option value="">Select a package...</option>
               <option value="Interior — Car ($120)">Interior — Car ($120)</option>
@@ -1961,16 +1963,8 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Vehicle (Year, Make, Model)</label>
-            <input type="text" id="f_vehicle" placeholder="e.g. 2022 Ford F-150" required>
-          </div>
-          <div class="form-group">
-            <label>Your Address</label>
+            <label for="f_address">Your Address</label>
             <input type="text" id="f_address" placeholder="123 Main St, Arcanum, OH" autocomplete="street-address" required>
-          </div>
-          <div class="form-group">
-            <label>Notes (optional)</label>
-            <textarea id="f_notes" placeholder="Special requests, condition notes, anything we should know..."></textarea>
           </div>
           <button type="submit" class="form-submit">Send Booking Request →</button>
           <div class="form-note">Your request is sent straight to us. On a phone, your text app also opens pre-filled so you can hit send.</div>
@@ -2031,7 +2025,7 @@
         </svg>
         <div class="reviews-empty-title">Be Our First Review</div>
         <div class="reviews-empty-text">We're just getting started — book a detail and we'd love to hear your honest feedback. Real reviews from real customers, coming soon.</div>
-        <a href="#booking" class="reviews-empty-btn">Book a Detail →</a>
+        <a href="#bookingFormContainer" class="reviews-empty-btn">Book a Detail →</a>
       </div>
 
       <!-- 
@@ -2153,7 +2147,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <img loading="lazy" src="images/logo.jpeg" alt="Logo" style="height:60px;width:60px;border-radius:50%;object-fit:cover;box-shadow:0 0 20px rgba(33,116,224,0.4);">
+        <img width="400" height="400" loading="lazy" src="images/logo.jpeg" alt="Logo" style="height:60px;width:60px;border-radius:50%;object-fit:cover;box-shadow:0 0 20px rgba(33,116,224,0.4);">
         <div class="footer-brand-name">BRUMBAUGH <span>DETAILING</span></div>
         <div class="footer-tagline">"Look Good. Feel Good. Drive Clean."</div>
         <div class="footer-social">
@@ -2174,7 +2168,7 @@
           <li><a href="#services">Interior Detail</a></li>
           <li><a href="#services">Exterior Detail</a></li>
           <li><a href="#services">Full Package</a></li>
-          <li><a href="#booking">Book Now</a></li>
+          <li><a href="#bookingFormContainer">Book Now</a></li>
         </ul>
       </div>
       <div>
@@ -2213,7 +2207,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13 1 .35 1.97.66 2.91a2 2 0 01-.45 2.11L8.09 10.09a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.94.31 1.92.53 2.91.66A2 2 0 0122 16.92z"/></svg>
     Call
   </a>
-  <a href="#booking" class="mobile-cta-book">Book Now →</a>
+  <a href="#bookingFormContainer" class="mobile-cta-book">Book Now →</a>
 </div>
 
 <script>
@@ -2293,7 +2287,12 @@
 
   // Mobile menu
   function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
+    const open = document.getElementById('mobileMenu').classList.toggle('open');
+    const btn = document.querySelector('.hamburger');
+    if (btn) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
   }
 
   // MERCH ORDER FORM — emails the order via Formspree, opens SMS on phones too
@@ -2695,13 +2694,10 @@
     const first = document.getElementById('f_first').value.trim();
     const last = document.getElementById('f_last').value.trim();
     const phone = document.getElementById('f_phone').value.trim();
-    const email = document.getElementById('f_email').value.trim();
     const service = document.getElementById('serviceSelect').value;
     const date = document.getElementById('dateInput').value;
     const time = document.getElementById('f_time').value;
-    const vehicle = document.getElementById('f_vehicle').value.trim();
     const address = document.getElementById('f_address').value.trim();
-    const notes = document.getElementById('f_notes').value.trim();
 
     // Final guard: make sure the chosen date is actually bookable
     const avail = getDateAvailability(date);
@@ -2741,14 +2737,11 @@
     let msg = `Hi! I'd like to book a detailing appointment.\n\n`;
     msg += `Name: ${first} ${last}\n`;
     msg += `Phone: ${phone}\n`;
-    if (email) msg += `Email: ${email}\n`;
     msg += `\nService: ${service}\n`;
     msg += `Date: ${prettyDate}\n`;
     msg += `Time: ${time}\n`;
     if (lengthLabel) msg += `Approx. length: ${lengthLabel}\n`;
-    msg += `Vehicle: ${vehicle}\n`;
     msg += `Address: ${address}\n`;
-    if (notes) msg += `\nNotes: ${notes}\n`;
     msg += `\nSent from your website.`;
 
     // Put message in the fallback textarea for manual copying
@@ -2758,17 +2751,13 @@
       _subject: `New Booking Request — ${first} ${last}`,
       Name: `${first} ${last}`,
       Phone: phone,
-      Email: email || 'Not provided',
       Service: service,
       Date: prettyDate,
       Time: time,
       'Approx. length': lengthLabel || '—',
-      Vehicle: vehicle,
       Address: address,
-      Notes: notes || 'None',
       message: msg
     };
-    if (email) payload._replyto = email;
 
     const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
 
